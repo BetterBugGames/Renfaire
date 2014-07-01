@@ -8,7 +8,7 @@
 	<input type="input" name="title" value="<?php echo $events_item['title']; ?>"/><br />
 
 	<label for="date">Date</label>
-	<input type="text" name="date" value="<?php echo $events_item['date']; ?>"></input><br />
+	<input type="date" name="date" value="<?php echo $events_item['date']; ?>"></input><br />
 	
 	<label for="description">Description</label>
 	<textarea name="description"><?php echo $events_item['description']; ?></textarea><br />

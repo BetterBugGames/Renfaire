@@ -64,14 +64,8 @@ class events_model extends CI_Model{
 			'date' => $this->input->post('date'),
 			'id' => $this->input->post('id')
 		);
-		return $this->db->query("
-		    UPDATE events
-		    SET
-		    title = '" . $data['title'] . "',
-		    date = '" . $data['date'] . "',
-		    description = '" . $data['description'] . "'
-		    WHERE id = " . $data['id']
-        );
+        $this->db->where('id', $this->input->post('id'));
+        return $this->db->update('events', $data);
 	}
 	
 	public function delete_event($id){
