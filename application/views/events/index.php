@@ -12,14 +12,7 @@
 
 <?php endforeach ?>
 
-<?php 
-	$query = $this->db->query("SELECT COUNT(*) as c FROM events WHERE unix_timestamp( ) < unix_timestamp( replace( events.date, '-', '' ) )");
-	$num = $query->row_array();
-	if($num['c'] % 5 == 0){
-		$pages = $num['c'] / 5;
-	}else{
-		$pages = (int)($num['c'] / 5) + 1;
-	}
+<?php
 	if($pages > 1){
 		echo "Pages: ";
 		for($i = 1; $i <= $pages; $i++){

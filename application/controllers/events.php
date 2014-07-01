@@ -10,6 +10,7 @@ class Events extends CI_Controller {
 	public function index($page = 1)
 	{
 		$data['events'] = $this->events_model->get_events($page);
+        $data['pages'] = $this->events_model->get_pages();
 		$data['title'] = 'Upcoming Events';
 
 		$this->load->view('templates/header', $data);
@@ -41,7 +42,6 @@ class Events extends CI_Controller {
 		$data['title'] = 'Create a new event';
 		
 		$this->form_validation->set_rules('title', 'Title', 'required');
-		//$this->form_validation->set_rules('date', 'date', 'trim|required|valid_date[m/d/y,/]');
 		$this->form_validation->set_rules('date', 'date', 'required');
 		
 		if ($this->form_validation->run() === FALSE)

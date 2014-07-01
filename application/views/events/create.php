@@ -9,7 +9,7 @@
 	<input type="input" name="title" value="<?php if (isset($_POST['title'])) { echo $_POST['title']; }?>"/><br />
 	
 	<label for="date">Date</label>
-	<input type="date" name="date" value="<?php if (isset($_POST['date'])) echo $_POST['date']; ?>"</input> <br />
+	<input type="date" name="date" value="<?php if (isset($_POST['date'])) echo $_POST['date']; ?>"/> <br />
 	
 	<label for="description">Description</label>
 	<textarea name="description" rows=10 cols=50><?php if (isset($_POST['description'])) echo $_POST['description']; ?></textarea><br />

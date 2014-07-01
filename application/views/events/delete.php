@@ -1,6 +1,7 @@
 <h2>Delete an event</h2>
 
 <?php
+//when a negative id number is given, it has been confirmed for deletion here
 $id = $events_item['id'];
 $id *= -1;
 ?>
